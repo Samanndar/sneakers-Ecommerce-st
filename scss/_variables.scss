@@ -1,0 +1,32 @@
+// Sass 
+$color-brown: hsl(26, 100%, 55%);
+$color-dark-blue: hsl(220, 13%, 13%);
+$color-grey-dark: hsl(219, 9%, 45%);
+$color-grey-darkey: hsl(220, 14%, 75%);
+$color-grey: hsl(223, 64%, 98%);
+$color-light: hsl(25, 100%, 94%);
+
+/*EFFECT*/
+$transition: all 0.5s ease 0s;
+
+$color-primary: $color-brown;
+
+/* BREAKPOINT */ 
+$breakpoint-medium: 48em;
+$breakpoint-large: 62em;
+$breakpoint-container: 69.5em;
+
+/* CUSTOM PROPS */
+:root {
+  --color-brown: #{$color-brown};
+  --color-dark: #{$color-dark-blue};
+  --color-grey-dark: #{$color-grey-dark};
+  --color-grey-darkey: #{$color-grey-darkey};
+  --color-grey: #{$color-grey};
+  --color-light: #{$color-light};
+
+  /*EFFECT*/
+  --transition: #{$transition};
+
+  --color-primary: #{$color-primary};
+}

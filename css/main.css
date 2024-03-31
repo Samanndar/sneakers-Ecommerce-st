@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Bold.woff2") format("woff2"), url("../fonts/KumbhSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Medium.woff2") format("woff2"), url("../fonts/KumbhSans-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Bold.woff2") format("woff2"), url("../fonts/KumbhSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Medium.woff2") format("woff2"), url("../fonts/KumbhSans-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*EFFECT*/
+/* BREAKPOINT */
+/* CUSTOM PROPS */
+:root {
+  --color-brown: hsl(26, 100%, 55%);
+  --color-dark: hsl(220, 13%, 13%);
+  --color-grey-dark: hsl(219, 9%, 45%);
+  --color-grey-darkey: hsl(220, 14%, 75%);
+  --color-grey: hsl(223, 64%, 98%);
+  --color-light: hsl(25, 100%, 94%);
+  /*EFFECT*/
+  --transition: all 0.5s ease 0s;
+  --color-primary: hsl(26, 100%, 55%);
+}
+
+/* OUTLINE*/
+/*
+  Josh's Custom CSS Reset + some modifications
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* GLOBAL */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 166.667%;
+  background-color: var(--color-bg-body);
+  color: rgba(29, 32, 37, 0.5);
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  opacity: 0.6;
+}
+
+*:focus {
+  outline: 2px dashed hsl(26, 100%, 55%);
+  outline-offset: 3px;
+}
+
+/* AUTOFILL-STYLES */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: var(--color-boder);
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* PLACEHOLDER-STYLES */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
