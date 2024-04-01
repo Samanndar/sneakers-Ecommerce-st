@@ -1,0 +1,29 @@
+// BURGER
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &__span {
+    width: 16px;
+    height: 3px;
+    background-color: var(--color-grey-dark);
+  }
+  &__span:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+.burger.burger-active {
+
+  & .burger__span:nth-child(1) {
+    transform: rotate(-45deg) translateY(4px);
+  }
+  & .burger__span:nth-child(2) {
+    transform: rotate(45deg) translateY(-4px);
+  }
+  & .burger__span:nth-child(3) {
+    transform: scale(0);
+  }
+}
+
