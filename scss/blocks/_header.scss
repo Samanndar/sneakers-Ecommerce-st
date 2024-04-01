@@ -58,15 +58,13 @@
     }
   }
 }
-
+.header__left {
+  position: relative;
+}
 .header__right,
 .header__left {
   display: flex;
-  align-items: flex-end;
-
-  @include breakpoint-up($breakpoint-medium) {
-    align-items: center;
-  }
+  align-items: center ;
 }
 .header__right > *:not(:last-child),
 .header__left > *:not(:last-child) {

@@ -27,7 +27,16 @@ function init () {
   countDecrement.addEventListener("click", decrementCount);
   countIncrement.addEventListener("click", increment);
 
+  // BURGER
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav");
+  const body = document.querySelector("body");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("burger-active");
+    nav.classList.toggle("nav-active");
+    body.classList.toggle("body-active");
 
+  })
 
 
 

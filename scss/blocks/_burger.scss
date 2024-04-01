@@ -14,21 +14,24 @@
     width: 16px;
     height: 3px;
     background-color: var(--color-grey-dark);
+    transition: var(--transition);
   }
   &__span:not(:last-child) {
     margin-bottom: 3px;
   }
 }
 .burger.burger-active {
+  position: absolute;
+  z-index: 10;
 
   & .burger__span:nth-child(1) {
-    transform: rotate(-45deg) translateY(4px);
+    transform: rotate(-45deg) translateY(8px);
   }
   & .burger__span:nth-child(2) {
-    transform: rotate(45deg) translateY(-4px);
+    transform: scale(0);
   }
   & .burger__span:nth-child(3) {
-    transform: scale(0);
+    transform: rotate(45deg) translateY(-8px);
   }
 }
 

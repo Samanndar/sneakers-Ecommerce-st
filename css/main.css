@@ -119,9 +119,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 166.667%;
-  background-color: var(--color-bg-body);
   color: rgba(29, 32, 37, 0.5);
   overflow-x: hidden;
+}
+
+body.body-active {
+  overflow: hidden;
 }
 
 img {
@@ -195,7 +198,7 @@ select:-webkit-autofill:focus {
   padding-top: 20px;
   padding-bottom: 27px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .header {
     padding-top: 28px;
     padding-bottom: 35px;
@@ -208,7 +211,7 @@ select:-webkit-autofill:focus {
   align-items: center;
   position: relative;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .header__container::after {
     content: "";
     position: absolute;
@@ -224,7 +227,7 @@ select:-webkit-autofill:focus {
   height: 100%;
   object-fit: cover;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .header__img-logo {
     width: 138px;
     height: 20px;
@@ -248,23 +251,21 @@ select:-webkit-autofill:focus {
   }
 }
 
+.header__left {
+  position: relative;
+}
+
 .header__right,
 .header__left {
   display: flex;
-  align-items: flex-end;
-}
-@media only screen and (min-width: 48em) {
-  .header__right,
-  .header__left {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 .header__right > *:not(:last-child),
 .header__left > *:not(:last-child) {
   margin-right: 22px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .header__right > *:not(:last-child),
   .header__left > *:not(:last-child) {
     margin-right: 46px;
@@ -272,12 +273,33 @@ select:-webkit-autofill:focus {
 }
 
 .nav {
+  transition: var(--transition);
   display: none;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .nav {
     display: block;
   }
+}
+
+.nav.nav-active {
+  display: block;
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: -24px;
+  left: -25px;
+}
+.nav.nav-active::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 15px;
+  background-color: rgba(29, 32, 37, 0.5);
 }
 
 .nav__list {
@@ -286,6 +308,7 @@ select:-webkit-autofill:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--transition);
 }
 .nav__list > *:not(:last-child) {
   margin-right: 17px;
@@ -295,6 +318,27 @@ select:-webkit-autofill:focus {
     margin-right: 35px;
   }
 }
+
+.nav.nav-active .nav__list {
+  width: 150%;
+  height: 100vh;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  align-items: start;
+  background-color: #fff;
+  padding-left: 32px;
+  padding-top: 107px;
+}
+.nav.nav-active .nav__list > *:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.nav.nav-active .nav__link {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
 .burger {
   display: flex;
   flex-direction: column;
@@ -302,7 +346,7 @@ select:-webkit-autofill:focus {
   transition: var(--transition);
   cursor: pointer;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .burger {
     display: none;
   }
@@ -311,19 +355,24 @@ select:-webkit-autofill:focus {
   width: 16px;
   height: 3px;
   background-color: var(--color-grey-dark);
+  transition: var(--transition);
 }
 .burger__span:not(:last-child) {
   margin-bottom: 3px;
 }
 
+.burger.burger-active {
+  position: absolute;
+  z-index: 10;
+}
 .burger.burger-active .burger__span:nth-child(1) {
-  transform: rotate(-45deg) translateY(4px);
+  transform: rotate(-45deg) translateY(8px);
 }
 .burger.burger-active .burger__span:nth-child(2) {
-  transform: rotate(45deg) translateY(-4px);
+  transform: scale(0);
 }
 .burger.burger-active .burger__span:nth-child(3) {
-  transform: scale(0);
+  transform: rotate(45deg) translateY(-8px);
 }
 
 .basket__cart-button {
@@ -356,7 +405,7 @@ select:-webkit-autofill:focus {
   background-color: var(--color-grey);
   border-radius: 10px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .count-wrapper {
     max-width: 325px;
   }
@@ -364,7 +413,7 @@ select:-webkit-autofill:focus {
 .count-wrapper > *:not(:last-child) {
   margin-right: 70px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.5em) {
   .count-wrapper > *:not(:last-child) {
     margin-right: 122px;
   }
