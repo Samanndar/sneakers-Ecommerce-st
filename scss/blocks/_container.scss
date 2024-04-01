@@ -1,0 +1,26 @@
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*640*/
+@include breakpoint-up(40em) {
+  $container-padding: 10px;
+
+  :root {
+    --container-padding: #{$container-padding};
+  }
+};
+
+@include breakpoint-down(40em) {
+  $container-padding: 24px;
+  
+  :root {
+    --container-padding: #{$container-padding};
+  }
+}
