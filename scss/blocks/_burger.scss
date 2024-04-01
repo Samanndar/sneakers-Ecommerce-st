@@ -3,7 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  transition: var(--transition);
+  cursor: pointer;  
+
+  @include breakpoint-up($breakpoint-medium) {
+    display: none;
+  }
 
   &__span {
     width: 16px;

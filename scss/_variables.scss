@@ -1,5 +1,6 @@
 // Sass 
 $color-brown: hsl(26, 100%, 55%);
+$color-brown-opacity: hsl(25, 100%, 94%);
 $color-dark-blue: hsl(220, 13%, 13%);
 $color-grey-dark: hsl(219, 9%, 45%);
 $color-grey-darkey: hsl(220, 14%, 75%);
@@ -19,6 +20,7 @@ $breakpoint-container: 69.5em;
 /* CUSTOM PROPS */
 :root {
   --color-brown: #{$color-brown};
+  --color-brown-opacity: #{$color-brown-opacity};
   --color-dark: #{$color-dark-blue};
   --color-grey-dark: #{$color-grey-dark};
   --color-grey-darkey: #{$color-grey-darkey};

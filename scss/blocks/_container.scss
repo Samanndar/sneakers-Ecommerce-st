@@ -10,7 +10,7 @@
 
 /*640*/
 @include breakpoint-up(40em) {
-  $container-padding: 10px;
+  $container-padding: 20px;
 
   :root {
     --container-padding: #{$container-padding};
@@ -18,7 +18,7 @@
 };
 
 @include breakpoint-down(40em) {
-  $container-padding: 24px;
+  $container-padding: 10px;
   
   :root {
     --container-padding: #{$container-padding};

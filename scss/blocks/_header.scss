@@ -1,28 +1,77 @@
+@use "sass:color";
 // HEADER
 .header {
   padding-top: 20px;
   padding-bottom: 27px;
+  
+  @include breakpoint-up($breakpoint-medium) {
+    padding-top: 28px;
+    padding-bottom: 35px;
+  }
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  
+  @include breakpoint-up($breakpoint-medium) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -35px;
+      width: 96%;
+      height: 1px;
+      background-color: var(--color-grey-darkey);
+    }
+  }
 }
 
-.header__img img{
-  max-width: 50px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.header__img {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include breakpoint-up($breakpoint-medium) {
+    &-logo {
+      width: 138px;
+      height: 20px;
+      cursor: pointer;
+    }
+    &-basket {
+      width: 22px;
+      height: 20px;
+      cursor: pointer;
+    }
+    &-avatar {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      border-radius: 50%;
+      border: 2px solid transparent;
+      &:hover {
+        border: 2px solid color.scale($color: $color-brown, $alpha: -50%);
+      }
+    }
+  }
 }
 
 .header__right,
 .header__left {
   display: flex;
   align-items: flex-end;
+
+  @include breakpoint-up($breakpoint-medium) {
+    align-items: center;
+  }
 }
 .header__right > *:not(:last-child),
 .header__left > *:not(:last-child) {
   margin-right: 22px;
+  @include breakpoint-up($breakpoint-medium) {
+    margin-right: 46px;
+  }
 }

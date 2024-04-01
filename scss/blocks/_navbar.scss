@@ -1,4 +1,30 @@
 // NAV-BAR
 .nav {
   display: none;
+  @include breakpoint-up($breakpoint-medium) {
+    display: block;
+  }
+}
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  & > *:not(:last-child) {
+    margin-right: 17px;
+  }
+  @include breakpoint-up($breakpoint-large) {
+    &>*:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+  &__item {
+    
+  }
+  
+  &__link {
+  }
 }
