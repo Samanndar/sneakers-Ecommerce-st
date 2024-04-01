@@ -29,4 +29,7 @@ $breakpoint-container: 69.5em;
   --transition: #{$transition};
 
   --color-primary: #{$color-primary};
+  
+  --container: #{$breakpoint-container};
+
 }
