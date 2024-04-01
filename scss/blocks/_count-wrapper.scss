@@ -1,0 +1,39 @@
+.count-wrapper {
+  margin-top: 10px;
+  max-width: 325px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 23px;
+  background-color: var(--color-grey);
+  border-radius: 10px;
+
+  & > *:not(:last-child) {
+    margin-right: 100px;
+    @include breakpoint-up($breakpoint-medium) {
+      margin-right: 122px;
+    }
+  }
+  &__decrement {
+    border: none;
+    padding: 12px 4px;
+    background-color: transparent;
+    cursor: pointer; 
+    & img {
+      max-width: 12px;
+    }
+  }
+  &__increment {
+    border: none;
+    padding: 12px 4px;
+    background-color: transparent;
+    cursor: pointer;
+    & img {
+      max-width: 12px;
+    }
+  }
+  &__value {
+    color: var(--color-dark);
+  }
+}
