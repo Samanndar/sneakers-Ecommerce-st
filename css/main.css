@@ -362,7 +362,7 @@ select:-webkit-autofill:focus {
   }
 }
 .count-wrapper > *:not(:last-child) {
-  margin-right: 100px;
+  margin-right: 70px;
 }
 @media only screen and (min-width: 48em) {
   .count-wrapper > *:not(:last-child) {
@@ -371,7 +371,7 @@ select:-webkit-autofill:focus {
 }
 .count-wrapper__decrement {
   border: none;
-  padding: 12px 4px;
+  padding: 22px 15px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -380,7 +380,7 @@ select:-webkit-autofill:focus {
 }
 .count-wrapper__increment {
   border: none;
-  padding: 12px 4px;
+  padding: 22px 15px;
   background-color: transparent;
   cursor: pointer;
 }

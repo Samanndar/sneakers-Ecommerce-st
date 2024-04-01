@@ -11,14 +11,14 @@
     max-width: 325px;
   }
   & > *:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 70px;
     @include breakpoint-up($breakpoint-medium) {
       margin-right: 122px;
     }
   }
   &__decrement {
     border: none;
-    padding: 12px 4px;
+    padding: 22px 15px;
     background-color: transparent;
     cursor: pointer; 
     & img {
@@ -27,7 +27,7 @@
   }
   &__increment {
     border: none;
-    padding: 12px 4px;
+    padding: 22px 15px;
     background-color: transparent;
     cursor: pointer;
     & img {
