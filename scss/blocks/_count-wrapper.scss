@@ -1,6 +1,5 @@
 .count-wrapper {
-  margin-top: 10px;
-  max-width: 325px;
+  max-width: 277.08px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -8,7 +7,9 @@
   padding: 25px 23px;
   background-color: var(--color-grey);
   border-radius: 10px;
-
+  @include breakpoint-up($breakpoint-medium) {
+    max-width: 325px;
+  }
   & > *:not(:last-child) {
     margin-right: 100px;
     @include breakpoint-up($breakpoint-medium) {

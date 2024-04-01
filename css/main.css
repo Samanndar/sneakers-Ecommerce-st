@@ -347,8 +347,7 @@ select:-webkit-autofill:focus {
 }
 
 .count-wrapper {
-  margin-top: 10px;
-  max-width: 325px;
+  max-width: 277.08px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -356,6 +355,11 @@ select:-webkit-autofill:focus {
   padding: 25px 23px;
   background-color: var(--color-grey);
   border-radius: 10px;
+}
+@media only screen and (min-width: 48em) {
+  .count-wrapper {
+    max-width: 325px;
+  }
 }
 .count-wrapper > *:not(:last-child) {
   margin-right: 100px;
