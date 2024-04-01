@@ -1,0 +1,22 @@
+@use "sass:color";
+.basket__cart-button {
+  background-color: var(--color-brown);
+  border: none;
+  border-radius: 10px;
+  padding: 21px 77px;
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 10px 22px 0px color.scale($color: $color-brown, $alpha: -50%);
+  transition: var(--transition);
+
+  &:hover {
+    background-color: color.scale($color: $color-brown, $alpha: -50%);
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 16px;
+  }
+}

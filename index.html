@@ -12,7 +12,48 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container container">
+      <!-- BURGER -->
+      <div class="header__left">
+        <div class="header__burger burger">
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+        </div>
+        <img src="./images/logo.svg" alt="Sneakers" class="header__img header__img-logo" width="138" height="20">
+        <!-- NAVBAR -->
+        <nav class="nav">
+          <ul class="nav__list" role="list">
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Collections</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Men</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Women</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">About</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <img src="./images/icon-basket.svg" alt="Basket" class="header__img header__img-basket" width="22" height="20">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/image-avatar.png" width="50" height="50">
+          <img src="./images/image-avatar.png" alt="Avatar img" class="header__img header__img-avatar" width="25"
+            height="25">
+        </picture>
+      </div>
+    </div>
+  </header>
 
 
   <script src="js/main.js"></script>

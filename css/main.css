@@ -326,4 +326,24 @@ select:-webkit-autofill:focus {
   transform: scale(0);
 }
 
+.basket__cart-button {
+  background-color: var(--color-brown);
+  border: none;
+  border-radius: 10px;
+  padding: 21px 77px;
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 10px 22px 0px rgba(255, 125, 26, 0.5);
+  transition: var(--transition);
+}
+.basket__cart-button:hover {
+  background-color: rgba(255, 125, 26, 0.5);
+}
+.basket__cart-button > *:not(:last-child) {
+  margin-right: 16px;
+}
+
 /*# sourceMappingURL=main.css.map */
