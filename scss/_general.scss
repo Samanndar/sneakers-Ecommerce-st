@@ -20,10 +20,12 @@ img {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-grey-darkey);
   transition: var(--transition);
-
+  text-decoration: none;
+  
   &:hover {
+    color: var(--color-grey-dark);
     text-decoration: none;
   }
 
