@@ -451,4 +451,38 @@ select:-webkit-autofill:focus {
   color: var(--color-dark);
 }
 
+.price-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-count__heading {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+.price-count__prsetenge {
+  margin-left: 17px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background-color: var(--color-light);
+  color: var(--color-brown);
+}
+.price-count__price-old {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-grey-darkey);
+  position: relative;
+}
+.price-count__price-old::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 10px;
+  left: 0;
+  background-color: var(--color-grey-darkey);
+}
+
 /*# sourceMappingURL=main.css.map */
