@@ -34,6 +34,13 @@
     height: 100%;
     object-fit: cover;
   }
+  &-logo {
+    margin-left: 22px;
+    
+    @include breakpoint-up($breakpoint-medium) {
+      margin-left: 46px;
+    }
+  }
   @include breakpoint-up($breakpoint-medium) {
     &-logo {
       width: 138px;
@@ -64,12 +71,12 @@
 .header__right,
 .header__left {
   display: flex;
-  align-items: center ;
+  align-items: center;
 }
-.header__right > *:not(:last-child),
-.header__left > *:not(:last-child) {
+.header__right > *:not(:last-child) {
   margin-right: 22px;
   @include breakpoint-up($breakpoint-medium) {
     margin-right: 46px;
   }
 }
+

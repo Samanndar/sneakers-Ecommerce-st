@@ -237,6 +237,14 @@ select:-webkit-autofill:focus {
   height: 100%;
   object-fit: cover;
 }
+.header__img-logo {
+  margin-left: 22px;
+}
+@media only screen and (min-width: 48.5em) {
+  .header__img-logo {
+    margin-left: 46px;
+  }
+}
 @media only screen and (min-width: 48.5em) {
   .header__img-logo {
     width: 138px;
@@ -271,13 +279,11 @@ select:-webkit-autofill:focus {
   align-items: center;
 }
 
-.header__right > *:not(:last-child),
-.header__left > *:not(:last-child) {
+.header__right > *:not(:last-child) {
   margin-right: 22px;
 }
 @media only screen and (min-width: 48.5em) {
-  .header__right > *:not(:last-child),
-  .header__left > *:not(:last-child) {
+  .header__right > *:not(:last-child) {
     margin-right: 46px;
   }
 }
@@ -365,7 +371,6 @@ select:-webkit-autofill:focus {
 }
 
 .burger.burger-active {
-  position: fixed;
   z-index: 10;
 }
 .burger.burger-active .burger__span:nth-child(1) {
