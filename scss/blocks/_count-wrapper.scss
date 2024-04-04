@@ -4,16 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 23px;
+  padding: 3px 23px;
   background-color: var(--color-grey);
   border-radius: 10px;
   @include breakpoint-up($breakpoint-medium) {
-    max-width: 325px;
+    max-width: 156px;
+    padding: 3px 16px; 
   }
+
   & > *:not(:last-child) {
     margin-right: 70px;
     @include breakpoint-up($breakpoint-medium) {
-      margin-right: 122px;
+      margin-right: 30px;
     }
   }
   &__decrement {

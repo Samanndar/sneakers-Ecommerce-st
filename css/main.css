@@ -401,13 +401,14 @@ select:-webkit-autofill:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 23px;
+  padding: 3px 23px;
   background-color: var(--color-grey);
   border-radius: 10px;
 }
 @media only screen and (min-width: 48.5em) {
   .count-wrapper {
-    max-width: 325px;
+    max-width: 156px;
+    padding: 3px 16px;
   }
 }
 .count-wrapper > *:not(:last-child) {
@@ -415,7 +416,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (min-width: 48.5em) {
   .count-wrapper > *:not(:last-child) {
-    margin-right: 122px;
+    margin-right: 30px;
   }
 }
 .count-wrapper__decrement {
