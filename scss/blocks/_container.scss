@@ -18,7 +18,7 @@
 };
 
 @include breakpoint-down(40em) {
-  $container-padding: 10px;
+  $container-padding: 24px;
   
   :root {
     --container-padding: #{$container-padding};

@@ -3,7 +3,7 @@
   background-color: var(--color-brown);
   border: none;
   border-radius: 10px;
-  padding: 21px 77px;
+  padding: 20px 74px;
   color: var(--color-light);
   display: flex;
   justify-content: center;
@@ -18,5 +18,8 @@
 
   & > *:not(:last-child) {
     margin-right: 16px;
+  }
+  @include breakpoint-up($breakpoint-medium) {
+    padding: 16px 77px;
   }
 }

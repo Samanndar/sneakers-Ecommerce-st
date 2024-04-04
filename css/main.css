@@ -201,7 +201,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 40em) {
   :root {
-    --container-padding: 10px;
+    --container-padding: 24px;
   }
 }
 .header {
@@ -389,7 +389,7 @@ select:-webkit-autofill:focus {
   background-color: var(--color-brown);
   border: none;
   border-radius: 10px;
-  padding: 21px 77px;
+  padding: 20px 74px;
   color: var(--color-light);
   display: flex;
   justify-content: center;
@@ -403,6 +403,11 @@ select:-webkit-autofill:focus {
 }
 .basket__cart-button > *:not(:last-child) {
   margin-right: 16px;
+}
+@media only screen and (min-width: 48.5em) {
+  .basket__cart-button {
+    padding: 16px 77px;
+  }
 }
 
 .count-wrapper {
@@ -458,12 +463,13 @@ select:-webkit-autofill:focus {
 }
 .price-count__heading {
   font-weight: 700;
+  font-size: 22px;
   color: var(--color-dark);
 }
 .price-count__prsetenge {
   margin-left: 17px;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   padding: 6px 9px;
   border-radius: 8px;
   background-color: var(--color-light);
@@ -471,7 +477,7 @@ select:-webkit-autofill:focus {
 }
 .price-count__price-old {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-grey-darkey);
   position: relative;
 }
@@ -483,6 +489,52 @@ select:-webkit-autofill:focus {
   bottom: 10px;
   left: 0;
   background-color: var(--color-grey-darkey);
+}
+
+.info-product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.info-product > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+.info-product__title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-brown);
+}
+.info-product__heading {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--color-dark);
+}
+.info-product__text {
+  max-width: 308px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-grey-darkey);
+}
+
+.cart-count__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.cart-count__container > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 48.5em) {
+  .cart-count__container {
+    flex-direction: row;
+  }
+  .cart-count__container > *:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

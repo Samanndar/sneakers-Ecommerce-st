@@ -1,0 +1,24 @@
+.cart-count {
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  
+    &>*:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @include breakpoint-up($breakpoint-medium) {
+      flex-direction: row;
+      
+      &>*:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+  }
+
+
+}
