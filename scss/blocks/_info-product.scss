@@ -5,6 +5,9 @@
   flex-direction: column;
 
   & > *:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  @include breakpoint-up($breakpoint-medium) {
     margin-bottom: 24px;
   }
 
@@ -26,12 +29,4 @@
     color: var(--color-grey-darkey);
   }
 
-
-
 }
-
-.info-product__title {}
-
-.info-product__heading {}
-
-.info-product__text {}

@@ -500,7 +500,12 @@ select:-webkit-autofill:focus {
   flex-direction: column;
 }
 .info-product > *:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 48.5em) {
+  .info-product {
+    margin-bottom: 24px;
+  }
 }
 .info-product__title {
   font-weight: 700;
