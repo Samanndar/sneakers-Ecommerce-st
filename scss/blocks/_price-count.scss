@@ -5,13 +5,14 @@
 
   &__heading {
     font-weight: 700;
+    font-size: 22px;
     color: var(--color-dark);
   }
   
   &__prsetenge {
     margin-left: 17px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 9px;
     border-radius: 8px;
     background-color: var(--color-light);
@@ -20,7 +21,7 @@
 
   &__price-old {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-grey-darkey);
     position: relative;
 
