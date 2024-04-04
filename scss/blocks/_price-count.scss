@@ -7,14 +7,16 @@
     font-weight: 700;
     font-size: 22px;
     color: var(--color-dark);
+    display: flex;
+    align-items: center;
   }
   
   &__prsetenge {
     margin-left: 17px;
     display: inline-block;
     font-size: 16px;
-    padding: 6px 9px;
-    border-radius: 8px;
+    padding: 0px 9px;
+    border-radius: 7  px;
     background-color: var(--color-light);
     color: var(--color-brown);
   }
@@ -30,7 +32,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      bottom: 10px;
+      bottom: 12px;
       left: 0;
       background-color: var(--color-grey-darkey);
     }
