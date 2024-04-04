@@ -21,7 +21,7 @@
   }
 }
 .burger.burger-active {
-  position: absolute;
+  position: fixed;
   z-index: 10;
 
   & .burger__span:nth-child(1) {

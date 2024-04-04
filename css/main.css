@@ -126,6 +126,16 @@ body {
 body.body-active {
   overflow: hidden;
 }
+body.body-active::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(29, 32, 37, 0.5);
+}
 
 img {
   height: auto;
@@ -272,43 +282,38 @@ select:-webkit-autofill:focus {
   }
 }
 
-.nav {
-  transition: var(--transition);
-  display: none;
-}
-@media only screen and (min-width: 48.5em) {
+@media only screen and (max-width: 768px) {
   .nav {
-    display: block;
+    position: fixed;
+    z-index: 5;
+    left: -100%;
+    top: 0;
+    transition: var(--transition);
   }
 }
 
 .nav.nav-active {
-  display: block;
-  position: absolute;
-  z-index: 6;
-  width: 100%;
+  left: 0;
+  width: 60%;
   height: 100%;
-  top: -24px;
-  left: -25px;
-}
-.nav.nav-active::after {
-  content: "";
-  position: absolute;
-  z-index: -5;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 15px;
-  background-color: rgba(29, 32, 37, 0.5);
+  background-color: #fff;
+  padding-top: 96px;
+  padding-left: 18px;
 }
 
 .nav__list {
   list-style: none;
   padding-left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  visibility: hidden;
   transition: var(--transition);
+}
+@media only screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+  }
 }
 .nav__list > *:not(:last-child) {
   margin-right: 17px;
@@ -320,17 +325,15 @@ select:-webkit-autofill:focus {
 }
 
 .nav.nav-active .nav__list {
-  width: 150%;
-  height: 100vh;
   display: flex;
   justify-content: stretch;
   flex-direction: column;
   align-items: start;
-  background-color: #fff;
-  padding-left: 32px;
-  padding-top: 107px;
+  background-color: transparent;
+  visibility: visible;
 }
 .nav.nav-active .nav__list > *:not(:last-child) {
+  margin-right: 0;
   margin-bottom: 35px;
 }
 
@@ -362,7 +365,7 @@ select:-webkit-autofill:focus {
 }
 
 .burger.burger-active {
-  position: absolute;
+  position: fixed;
   z-index: 10;
 }
 .burger.burger-active .burger__span:nth-child(1) {
