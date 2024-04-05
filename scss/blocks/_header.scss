@@ -20,10 +20,10 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -35px;
+      bottom: -25px;
       width: 96%;
       height: 1px;
-      background-color: var(--color-grey-darkey);
+      background-color: var(--color-grey);
     }
   }
 }
@@ -39,7 +39,7 @@
     margin-right: 22px;
     
     @include breakpoint-up($breakpoint-medium) {
-      margin-left: 46px;
+      margin-left: 0;
       margin-right: 46px;
     }
   }

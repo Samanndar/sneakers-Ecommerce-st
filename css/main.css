@@ -225,10 +225,10 @@ select:-webkit-autofill:focus {
   .header__container::after {
     content: "";
     position: absolute;
-    bottom: -35px;
+    bottom: -25px;
     width: 96%;
     height: 1px;
-    background-color: var(--color-grey-darkey);
+    background-color: var(--color-grey);
   }
 }
 
@@ -243,7 +243,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (min-width: 48.5em) {
   .header__img-logo {
-    margin-left: 46px;
+    margin-left: 0;
     margin-right: 46px;
   }
 }
@@ -383,6 +383,89 @@ select:-webkit-autofill:focus {
 }
 .burger.burger-active .burger__span:nth-child(3) {
   transform: rotate(45deg) translateY(-8px);
+}
+
+.carousel-product__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel-product__img-box {
+  position: relative;
+  max-width: 445px;
+  width: 100%;
+  height: 445px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel-product__img-box:not(:last-child) {
+  margin-bottom: 32px;
+}
+.carousel-product__img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.carousel-product__img-item {
+  transition: var(--transition);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel-product__img-slides {
+  width: 93%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transition: var(--transition);
+}
+.carousel-product__img-slides:hover {
+  opacity: 1;
+}
+.carousel-product__img-slides button {
+  padding: 16px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.carousel-product__points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-product__points > *:not(:last-child) {
+  margin-right: 30px;
+}
+.carousel-product__point {
+  max-width: 90px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+.carousel-product__point:hover {
+  border: 2px solid var(--color-brown);
+}
+.carousel-product__point img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.carousel-product__point img:hover {
+  opacity: 0.5;
+}
+
+.carousel-product__point-active {
+  border: 2px solid var(--color-brown);
+  opacity: 0.5;
 }
 
 .basket__cart-button {
