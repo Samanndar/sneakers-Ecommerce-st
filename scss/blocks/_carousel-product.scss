@@ -6,17 +6,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    // margin: -25px;
   }
   &__img-box {
     position: relative;
     max-width: 445px;
-    width: 100%;
+    width: 118%;
     height: 445px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
+    
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -26,8 +27,6 @@
     height: 100%;
     object-fit: contain;
     border-radius: 20px;
-    // border-top-left-radius: 20px;
-    // border-top-right-radius: 20px;
   }
   &__img-item {
     transition: var(--transition);
@@ -36,32 +35,44 @@
     height: 100%;
   }
   &__img-slides {
-    width: 93%;
-    height: 100%;
+    opacity: 1;
+    width: 92%;
+    height: 90%;
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    opacity: 1;
-    transition: var(--transition);
-  
-    &:hover {
-      opacity: 1;
+    @include breakpoint-up($breakpoint-large) {
+      width: 93%;
+      height: 100%;
+      opacity: 0;
+      transition: var(--transition);
+    
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &__img-slides button{
-    padding: 16px;
+    padding: 8px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    
+    @include breakpoint-up($breakpoint-large) {
+      padding: 16px;
+    }
   }
   &__points {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &> *:not(:last-child) {
-      margin-right: 30px;
+    display: none;
+    @include breakpoint-up($breakpoint-large) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      &> *:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
   &__point {
@@ -90,5 +101,8 @@
 
 .carousel-product__point-active {
   border: 2px solid var(--color-brown);
-  opacity: .5;
+  
+  & img {
+    opacity: .5;
+  }
 }
