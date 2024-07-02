@@ -121,17 +121,20 @@ body {
   line-height: 166.667%;
   color: rgba(29, 32, 37, 0.5);
   overflow-x: hidden;
+  position: relative;
 }
 
-body.body-active {
-  overflow: hidden;
+@media only screen and (max-width: 48.5em) {
+  body.body-active {
+    overflow: hidden;
+  }
 }
 body.body-active::after {
   content: "";
   position: absolute;
   z-index: 1;
   width: 100vw;
-  height: 100%;
+  height: 130%;
   left: 0;
   top: 0;
   background-color: rgba(29, 32, 37, 0.5);
@@ -485,6 +488,29 @@ select:-webkit-autofill:focus {
 }
 .carousel-product__point-active img {
   opacity: 0.5;
+}
+
+.carousel-modal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-modal__closed {
+  padding-right: 24px;
+  margin-bottom: 24px;
+  transition: var(--transition);
+  color: var(--color-light);
+  cursor: pointer;
+}
+.carousel-modal__closed:hover {
+  color: var(--color-brown);
 }
 
 .basket__cart-button {

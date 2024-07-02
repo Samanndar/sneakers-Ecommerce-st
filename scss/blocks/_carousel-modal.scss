@@ -1,0 +1,25 @@
+.carousel-modal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-modal__closed {
+  padding-right: 24px;
+  margin-bottom: 24px;
+  transition: var(--transition);
+  color: var(--color-light);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-brown);
+  }
+}
+
+.carousel-modal__closed-img {}

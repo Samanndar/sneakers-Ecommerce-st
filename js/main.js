@@ -31,12 +31,13 @@ function init () {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
   const body = document.querySelector("body");
-  burger.addEventListener("click", () => {
+  function elToggle() {
     burger.classList.toggle("burger-active");
     nav.classList.toggle("nav-active");
     body.classList.toggle("body-active");
 
-  })
+  }
+  burger.addEventListener("click", elToggle);
   // CAROUSEL-PRODUCT
   const imgItems = document.querySelectorAll(".carousel-product__img-item");
   const imgPoints = document.querySelectorAll(".carousel-product__point");
@@ -94,6 +95,15 @@ function init () {
 
   imgNextBtn.addEventListener("click", imgNext);
   imgPrevBtn.addEventListener("click", imgPrev);
+
+  const closeEl = document.querySelector(".carousel-modal");
+  const closeBtn = document.querySelector(".carousel-modal__closed");
+  closeBtn.addEventListener("click", () => {
+    burger.classList.remove("burger-active");
+    nav.classList.remove("nav-active");
+    body.classList.remove("body-active");
+    closeEl.style.display = "none";
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init);
