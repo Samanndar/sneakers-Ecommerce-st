@@ -325,6 +325,17 @@ select:-webkit-autofill:focus {
     align-items: center;
     visibility: visible;
   }
+  .nav__list .nav__link:hover {
+    position: relative;
+  }
+  .nav__list .nav__link:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 56px;
+    background-color: var(--color-brown);
+  }
 }
 .nav__list > *:not(:last-child) {
   margin-right: 17px;
