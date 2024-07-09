@@ -49,4 +49,7 @@
   color: #fff;
   background-color: var(--color-brown);
   cursor: pointer;
+  @include breakpoint-down(475px) {
+    padding: 22px 90px;
+  }
 }
