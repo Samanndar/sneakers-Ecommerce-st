@@ -104,6 +104,9 @@ function init () {
     body.classList.remove("body-active");
     closeEl.style.display = "none";
   })
+
+  // BASKET SNEAKERS ADD TO CART
+  
 }
 
 document.addEventListener('DOMContentLoaded', init);
