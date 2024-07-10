@@ -235,6 +235,10 @@ select:-webkit-autofill:focus {
   }
 }
 
+.header__img-basket {
+  cursor: pointer;
+}
+
 .header__img-box {
   display: flex;
   position: relative;
@@ -649,7 +653,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: -2px 10px 32px -10px rgba(34, 60, 80, 0.51);
   -moz-box-shadow: -2px 10px 32px -10px rgba(34, 60, 80, 0.51);
   box-shadow: -2px 10px 32px -10px rgba(34, 60, 80, 0.51);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 8px;
@@ -684,6 +688,10 @@ select:-webkit-autofill:focus {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-grey-dark);
+}
+
+.cart-basket__boxs-active {
+  display: flex;
 }
 
 .count-wrapper {

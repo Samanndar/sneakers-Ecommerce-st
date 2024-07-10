@@ -96,17 +96,76 @@ function init () {
   imgNextBtn.addEventListener("click", imgNext);
   imgPrevBtn.addEventListener("click", imgPrev);
 
-  const closeEl = document.querySelector(".carousel-modal");
-  const closeBtn = document.querySelector(".carousel-modal__closed");
-  closeBtn.addEventListener("click", () => {
-    burger.classList.remove("burger-active");
-    nav.classList.remove("nav-active");
-    body.classList.remove("body-active");
-    closeEl.style.display = "none";
-  })
 
   // BASKET SNEAKERS ADD TO CART
-  
+  const elBasketParent = document.querySelector(".header__img-box")
+  const elBasket = document.querySelector(".header__img-basket");
+  const elBasketBoxs = document.querySelector(".cart-basket__boxs");
+  const btnBasketToCart = document.querySelector(".basket__cart-button");
+  const elCartBasketBox = document.querySelector(".cart-basket__box");
+  const fetchData = "./data.json";
+  let elBasketQuantity = document.createElement("span");
+  let elCreateProduct = document.createElement("div");
+  elBasketQuantity.classList.add("header__quantity");
+  // LOGIC BASKET PRICE
+  function addToCart() {
+    elBasketParent.appendChild(elBasketQuantity);
+    elBasketQuantity.innerHTML = countValue.textContent;
+    resData(fetchData)
+  }
+  btnBasketToCart.addEventListener("click", addToCart);
+
+  elCartBasketBox.addEventListener("click", function(e) {
+    if (e.target.className == "sneakers-basket__delete") {
+      elBasketQuantity.innerHTML = "";
+      elBasketQuantity.classList.remove("header__quantity");
+      elCartBasketBox.innerHTML = `
+        <div class="cart-basket__item">
+          Your cart is empty.
+        </div>
+      `
+      console.log("bosildi", e.target.className)
+    }
+  });
+
+  // FETCH DATA.JSON
+  function resData(fetchdata) {
+    fetch(fetchdata)
+      .then(res => res.json())
+      .then(data => {
+        let dataProduct = data.products;
+        elCreateProduct.classList.add("cart-basket__sneakers");
+        dataProduct.forEach(data => {    
+          elCreateProduct.innerHTML = `
+            <div class="sneakers-basket__box">
+              <div class="sneakers-basket__img-box">
+                <img src="./images/${data.img}" alt="product" class="sneakers-basket__img" width="50" height="50">
+              </div>
+              <div class="sneakers-basket__desc">
+                <h3 class="sneakers-basket__title">${data.title}</h3>
+                <span class="sneakers-basket__price">$${data.price}</span>
+                <span class="sneakers-basket__count">x ${countValue.textContent}</span>
+                <span class="sneakers-basket__total">$${countValue.textContent * data.price}</span>
+              </div>
+              <div class="sneakers-basket__delete-sneaker">
+                <img src="./images/${data.img_delete}" alt="cart-delete" class="sneakers-basket__delete">
+              </div>
+            </div>
+            <div class="sneakers-basket__checkout-btn">
+              <button class="sneakers-basket__checkout" type="button">Checkout</button>
+            </div>
+          `
+          elCartBasketBox.innerHTML = "";
+          elCartBasketBox.appendChild(elCreateProduct)
+        }) 
+      })
+  }
+
+  function elBasketToggle() {
+    elBasketBoxs.classList.toggle("cart-basket__boxs-active")
+  }
+  elBasket.addEventListener("click", elBasketToggle);
+
 }
 
 document.addEventListener('DOMContentLoaded', init);

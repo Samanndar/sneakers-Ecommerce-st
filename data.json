@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "image-product-1-thumbnail.jpg",
+      "img_delete": "icon-delete.svg",
+      "title": "Fall Limited Edition Sneakers",
+      "price": "125.00"
+    }
+  ]
+}

@@ -27,7 +27,9 @@
     }
   }
 }
-
+.header__img-basket {
+  cursor: pointer;
+}
 .header__img {
   &-box {
     display: flex;
