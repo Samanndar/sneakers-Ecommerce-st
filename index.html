@@ -11,6 +11,186 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container container">
+      <!-- BURGER -->
+      <div class="header__left">
+        <div class="header__burger burger">
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+        </div>
+        <img src="./images/logo.svg" alt="Sneakers" class="header__img header__img-logo" width="138" height="20">
+        <!-- NAVBAR -->
+        <nav class="nav">
+          <ul class="nav__list" role="list">
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Collections</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Men</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Women</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">About</a>
+            </li>
+            <li class="nav__item" role="listitem">
+              <a href="" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="basket-box">
+          <div class="header__img-box">
+            <img src="./images/icon-basket.svg" alt="Basket" class="header__img header__img-basket" width="22"
+              height="20">
+          </div>
+          <!-- CARD TO BASKET -->
+          <div class="cart-basket__boxs">
+            <div class="cart-basket__cart">
+              <h2>Cart</h2>
+            </div>
+            <div class="cart-basket__box">
+              <div class="cart-basket__item">
+                Your cart is empty.
+              </div>
+            </div>
+          </div>
+        </div>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/image-avatar.png" width="50" height="50">
+          <img src="./images/image-avatar.png" alt="Avatar img" class="header__img header__img-avatar" width="25"
+            height="25">
+        </picture>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <!-- CAROUSEL-PRODUCT -->
+    <div class="carousel-product">
+      <div class="carousel-product__container container">
+        <div class="carousel-product__img-box">
+          <img src="./images/image-product-1.jpg" alt="thumbnail" class="carousel-product__img-item">
+          <img src="./images/image-product-2.jpg" alt="thumbnail" class="carousel-product__img-item">
+          <img src="./images/image-product-3.jpg" alt="thumbnail" class="carousel-product__img-item">
+          <img src="./images/image-product-4.jpg" alt="thumbnail" class="carousel-product__img-item">
+          <div class="carousel-product__img-slides">
+            <button class="carousel-product__prev">
+              <img src="./images/icon-previous.svg" alt="Prev">
+            </button>
+            <button class="carousel-product__next">
+              <img src="./images/icon-next.svg" alt="Next">
+            </button>
+          </div>
+        </div>
+        <div class="carousel-product__points">
+          <span class="carousel-product__point">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="sneakers">
+          </span>
+          <span class="carousel-product__point">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="sneakers">
+          </span>
+          <span class="carousel-product__point">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="sneakers">
+          </span>
+          <span class="carousel-product__point">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="sneakers">
+          </span>
+        </div>
+      </div>
+      <!-- CAROUSEL-PRODUCT-MODAL Tugalanmagan... #bug -->
+      <!-- <div class="carousel-modal">
+          <div class="carousel-modal__closed">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="currentColor" fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="carousel-product__container container">
+            <div class="carousel-product__img-box">
+              <img src="./images/image-product-1.jpg" alt="thumbnail" class="carousel-product__img-item">
+              <img src="./images/image-product-2.jpg" alt="thumbnail" class="carousel-product__img-item">
+              <img src="./images/image-product-3.jpg" alt="thumbnail" class="carousel-product__img-item">
+              <img src="./images/image-product-4.jpg" alt="thumbnail" class="carousel-product__img-item">
+              <div class="carousel-product__img-slides">
+                <button class="carousel-product__prev">
+                  <img src="./images/icon-previous.svg" alt="Prev">
+                </button>
+                <button class="carousel-product__next">
+                  <img src="./images/icon-next.svg" alt="Next">
+                </button>
+              </div>
+            </div>
+            <div class="carousel-product__points">
+              <span class="carousel-product__point">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="sneakers">
+              </span>
+              <span class="carousel-product__point">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="sneakers">
+              </span>
+              <span class="carousel-product__point">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="sneakers">
+              </span>
+              <span class="carousel-product__point">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="sneakers">
+              </span>
+            </div>
+          </div>
+        </div> -->
+    
+    
+    </div>
+    <div class="main-content__tag-box">
+      <!-- INFO-PRODUCT -->
+      <div class="container">
+        <div class="info-product">
+          <h3 class="info-product__title">Sneaker Company</h3>
+          <h2 class="info-product__heading">Fall Limited Edition <br /> Sneakers</h2>
+          <p class="info-product__text">These low-profile sneakers are your perfect casual wear companion. Featuring a druble
+            rubber outer sole, they'll withstand everything the weather can offer.</p>
+        </div>
+      </div>
+      <!-- PRICE-TEXT -->
+      <div class="container">
+        <div class="price-count">
+          <h2 class="price-count__heading">
+            $125.00
+            <sapn class="price-count__prsetenge">50%</sapn>
+          </h2>
+          <p class="price-count__price-old">$250.00</p>
+        </div>
+      </div>
+      <!-- CART-COUNT -->
+      <div class="cart-count">
+        <div class="cart-count__container container">
+          <!-- COUNT -->
+          <div class="count-wrapper">
+            <button class="count-wrapper__decrement">
+              <img src="./images/icon-decrement.svg" alt="Decrement">
+            </button>
+            <span class="count-wrapper__value">1</span>
+            <button class="count-wrapper__increment">
+              <img src="./images/icon-increment.svg" alt="Increment">
+            </button>
+          </div>
+      
+          <!-- ADD-TO-CART-BUTTON -->
+          <button class="basket__cart-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20">
+              <path fill="currentColor"
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" />
+            </svg>
+            <span class="basket__cart-span">Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
   <script src="js/main.js"></script>

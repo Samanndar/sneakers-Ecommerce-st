@@ -1,0 +1,15 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 126px;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  
+  @include breakpoint-down(992px) {
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,7 +1,8 @@
 .price-count {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 
   &__heading {
     font-weight: 700;
